@@ -1,0 +1,34 @@
+Alleg::Core(3)        User Contributed Perl Documentation       Alleg::Core(3)
+
+
+
+NAME
+       Alleg::Core - Perl SDK for building Allegiance Game Core (.igc) files
+
+SYNOPSIS
+         use Alleg::Core;
+         my $core      = Alleg::Core->new();
+         my $core      = Alleg::Core->new( $FILE_HANDLE_TO_IGC );
+         my $core      = Alleg::Core->new( Alleg::Globals->new() );
+         my $core      = Alleg::Core->new( %new_global_options );
+         my $size      = $core->size();
+         my $version   = $core->version();
+         $core->version($my_version);
+
+         my $igc       = $core->pack(); # you probably want to write this to a .igc file
+
+         my $object    = $core->add_any_type(TypeID => $obj_type, Struct => $struct);
+         my $object    = $core->add_generic(TypeID => $obj_type, Struct => $struct);
+         $core->set_globals( Alleg::Globals->new() ); # replaces existing Globals object
+
+DESCRIPTION
+AUTHOR
+       Zenin <zenin@rhps.org>
+
+SEE ALSO
+       perl(1).
+
+
+
+perl v5.10.1                      2003-01-21                    Alleg::Core(3)
+
